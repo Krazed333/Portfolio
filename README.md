@@ -1,1 +1,1 @@
-# ethan-portfolio-starter
+# Kamal-Portfolio

@@ -78,14 +78,6 @@ const aboutData = [
         title: "Web Development - ABC University, LA, CA",
         stage: "2011",
       },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
     ],
   },
 ];
@@ -93,6 +85,7 @@ const aboutData = [
 //components
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
+import AvatarBdr from "../../components/AvatarBdr";
 
 //framer motion
 import { motion } from "framer-motion";
@@ -109,31 +102,53 @@ const About = () => {
       <Circles />
       {/* avatar */}
       <motion.div
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="hidden xl:flex absolute bottom-0 -left-[220px]"
         variants={fadeIn("right, 0.2")}
         initial="hidden"
         animate="show"
         exit="hidden"
       >
-        <Avatar />
+        {/*<Avatar />*/}
+        {/*
+          <div className="absolute transform scale-90 z-0;">
+            <AvatarBdr />
+          </div>
+  */}
       </motion.div>
+      {/*border */}
+      <div className="hidden xl:flex absolute bottom-0  bg-primary/30 scale-x-[-1] filter invert(1) ">
+        <Circles />
+      </div>
+
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text*/}
         <div className="flex-1 flex flex-col justify-center">
-          <h2 className="h2">
+          <motion.h2
+            variants={fadeIn("right, 0.2")}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2"
+          >
             Captivating <span className="text-accent"> stories</span> birth
             magnificent designs.
-          </h2>
-          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-12 xl:px-0">
+          </motion.h2>
+          <motion.p
+            variants={fadeIn("right, 0.2")}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-12 xl:px-0"
+          >
             I am a passionate web developer and UI/UX designer with over 10
             years of experience. I am dedicated to creating beautiful and
             functional designs that are user-friendly and visually appealing. I
             am passionate about what I do and I am always looking for new ways
             to improve and enhance my work.
-          </p>
+          </motion.p>
           {/* counters */}
-          <div>
-            <div>
+          <div className="hidden md:flex md:max-w-xl xl:max-w-wnone mx-auto xl:mx-0 mb-8">
+            <div className="flex flex-1 xl:gap-x-6">
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className=" text-2xl xl:text-4xl font-extrabold text-accent mb-2">

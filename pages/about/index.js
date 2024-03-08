@@ -33,14 +33,14 @@ const aboutData = [
         title: "Front-End Web",
         // eslint-disable-next-line react/jsx-key
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaBootstrap />,
-          <SiTailwindcss />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiRedux />,
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="js" />,
+          <FaBootstrap key="bootstrap" />,
+          <SiTailwindcss key="tailwindcss" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="nextjs" />,
+          <SiRedux key="redux" />,
         ],
       },
       {

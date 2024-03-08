@@ -3,23 +3,32 @@ const Resume = () => {
     <div
       style={{
         display: "flex",
-        justifyContent: "center", // Centered horizontally in the container
+        justifyContent: "center",
         alignItems: "center",
-        height: "100vh", // Full viewport height
-        width: "100%", // Take full width of its parent
+        height: "100vh",
+        padding: "20px", // Adds general padding
       }}
     >
-      <iframe
-        src="https://docs.google.com/document/d/e/2PACX-1vTKGUYGJ_DC5h1ffNTzmHeUx5RSV4qEJNOkvRyw-fQEkzzSJRqcrI0Z0Lu_wFgrMCAdA47dfgIzHV9z/pub?embedded=true"
+      <div
         style={{
-          width: "100%", // Make iframe responsive by allowing it to fill the width of its parent
-          height: "80vh", // Adjust height based on the viewport, might adjust to use 100% if needed
-          maxWidth: "800px", // Maximum width of the iframe
-          border: "none",
-          margin: "0 auto", // Center the iframe in the div if its width is less than the maximum width
+          width: "100%",
+          maxWidth: "800px",
+          height: "auto", // Adjusts height based on the content
+          overflow: "hidden",
+          padding: "0 10px", // Adds padding on the sides for mobile view
+          boxSizing: "border-box", // Ensures padding is included in the width calculation
         }}
-        title="Resume"
-      ></iframe>
+      >
+        <iframe
+          src="https://docs.google.com/document/d/e/2PACX-1vTKGUYGJ_DC5h1ffNTzmHeUx5RSV4qEJNOkvRyw-fQEkzzSJRqcrI0Z0Lu_wFgrMCAdA47dfgIzHV9z/pub?embedded=true"
+          style={{
+            width: "100%",
+            height: "80vh", // Or use 'auto' to adjust based on the content
+            border: "none",
+          }}
+          title="Resume"
+        ></iframe>
+      </div>
     </div>
   );
 };

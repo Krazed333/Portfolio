@@ -63,13 +63,14 @@ const WorkSlider = () => {
       modules={{ Pagination }}
       className="h-[280px] sm:h-[480px]"
     >
-      {workSlides.slides.map((slide, index) => {
+      {workSlides.slides.map((slide, slideIndex) => {
         return (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={slideIndex}>
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-              {slide.images.map((image, index) => {
+              {slide.images.map((image, imageIndex) => {
                 return (
                   <Link
+                    key={imageIndex}
                     href={
                       image.title === "Batle Bots"
                         ? image.URL
@@ -78,7 +79,7 @@ const WorkSlider = () => {
                   >
                     <div
                       className="relative rounded-lg overflow-hidden flex items-center justify-center group "
-                      key={index}
+                      key={imageIndex}
                     >
                       <div className="w-[250px] xl:w-[350px] flex items-center justify-center relative overflow-hidden group xl:h-[200px] h-[130px]">
                         <Image

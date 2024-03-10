@@ -4,7 +4,7 @@ const Bulb = () => {
   return (
     <div
       className="absolute -left-36 -bottom-12 rotate-12 mix-blend-color-dodge animate-pulse duration-75 z-10 w-[200px] xl:w-[260px]"
-      style={{ zIndex: 2 }}
+      style={{ zIndex: 1 }}
     >
       <Image
         src={"/bulb.png"}

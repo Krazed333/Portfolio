@@ -59,16 +59,16 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Sales Admin - PT. Mitra Alas Selaras",
-        stage: "2023 (3 months)",
+        title: "Hawka Foundation Co-Founder",
+        stage: "2015",
       },
       {
-        title: "Head of Warehouse - PT. Mitra Alas Selaras",
-        stage: "2020 - 2023",
+        title: "Computer Science Instructor-Wifi-Combat Academy",
+        stage: "2021",
       },
       {
-        title: "Warehouse helper - PT. Mitra Alas Selaras",
-        stage: "2018 - 2020",
+        title: "Cloud Engineer Intern-21st Century Technologies",
+        stage: "2023",
       },
     ],
   },
@@ -76,11 +76,7 @@ const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Fullstack Web & Mobile Developer - PijarCamp",
-        stage: "2024",
-      },
-      {
-        title: "Computer Science Bachelor - Pamulang University",
+        title: "Windows Server Hybrid Administrator Associate - Microsoft",
         stage: "2023",
       },
     ],
@@ -112,8 +108,7 @@ const About = () => {
             exit={"hidden"}
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            A little <span className="text-accent">About</span> me.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -122,11 +117,10 @@ const About = () => {
             exit={"hidden"}
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 z-10"
           >
-            When I was in college, I worked as a sales admin. Since I graduated,
-            I decided to switch careers to become a software developer so I
-            attended a bootcamp to deepen my skills. The world of programming is
-            my passion so I am very enthusiastic and committed to giving the
-            best in every project I work on.
+            Mechanical Engineering undergraduate with a passion for web
+            Development. I am a quick learner and a team player. I am always
+            eager to learn new technologies and apply them to real-world
+            problems. Please explore my portfolio to know more about me!
           </motion.p>
           {/* counters */}
           <motion.div

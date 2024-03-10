@@ -1,22 +1,31 @@
-// data
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import Image from "next/image";
+import Link from "next/link";
+import { Pagination } from "swiper";
+import { BsArrowRight } from "react-icons/bs";
+
 const workSlides = {
   slides: [
     {
       images: [
         {
-          title: "Animation",
-          path: "/thumb1.jpg",
+          title: "Music Visualizer",
+          path: "/LEDproject.jpg",
         },
         {
-          title: "Canvas",
-          path: "/thumb2.jpg",
+          title: "Facial Regonition",
+          path: "/FaceID.jpg",
         },
         {
-          title: "ReactJs",
-          path: "/thumb3.jpg",
+          title: "Batle Bots",
+          path: "/battlebots.jpg",
+          URL: "https://wiki.robojackets.org/Chonkiii",
         },
         {
-          title: "NextJs",
+          title: "Portfolio",
           path: "/thumb4.jpg",
         },
       ],
@@ -24,8 +33,8 @@ const workSlides = {
     {
       images: [
         {
-          title: "Static Landing Pages",
-          path: "/thumb4.jpg",
+          title: "Quiz-Testing App",
+          path: "/Quiz.jpg",
         },
         {
           title: "MERN stack project",
@@ -44,19 +53,6 @@ const workSlides = {
   ],
 };
 
-// icons
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import Image from "next/image";
-import Link from "next/link";
-
-import { Pagination } from "swiper";
-// data
-
-import { BsArrowRight } from "react-icons/bs";
-
 const WorkSlider = () => {
   return (
     <Swiper
@@ -70,10 +66,16 @@ const WorkSlider = () => {
       {workSlides.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <Link href="https://github.com/Aashu-Tiwari?tab=repositories">
-              <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-                {slide.images.map((image, index) => {
-                  return (
+            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+              {slide.images.map((image, index) => {
+                return (
+                  <Link
+                    href={
+                      image.title === "Batle Bots"
+                        ? image.URL
+                        : "https://github.com/Krazed333?tab=repositories"
+                    }
+                  >
                     <div
                       className="relative rounded-lg overflow-hidden flex items-center justify-center group "
                       key={index}
@@ -97,7 +99,6 @@ const WorkSlider = () => {
                               title part 2
                             </div>
                             {/* icon */}
-                            <div>icon</div>
                             <div className="text-xl">
                               <BsArrowRight />
                             </div>
@@ -105,10 +106,10 @@ const WorkSlider = () => {
                         </div>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
-            </Link>
+                  </Link>
+                );
+              })}
+            </div>
           </SwiperSlide>
         );
       })}

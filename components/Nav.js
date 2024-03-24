@@ -4,7 +4,7 @@ import {
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
+  HiDocumentText,
   HiEnvelope,
 } from "react-icons/hi2";
 
@@ -16,7 +16,7 @@ export const navData = [
   {
     name: "Resume",
     path: "https://drive.google.com/file/d/13o0fcCS940S_XRhc5zKdPIdgI98Mj1Kd/view?usp=sharing",
-    icon: <HiChatBubbleBottomCenterText />,
+    icon: <HiDocumentText />,
     isExternal: true, // Add a flag to indicate this is an external link
     target: "_blank", // Add a target to open the link in a new tab
     rel: "noopener noreferrer", // Add rel for security reasons when using target="_blank"

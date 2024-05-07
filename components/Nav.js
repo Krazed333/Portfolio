@@ -15,7 +15,7 @@ export const navData = [
   { name: "Projects", path: "/Projects", icon: <HiViewColumns /> },
   {
     name: "Resume",
-    path: "https://drive.google.com/file/d/13o0fcCS940S_XRhc5zKdPIdgI98Mj1Kd/view?usp=sharing",
+    path: "https://drive.google.com/file/d/16q29mShokhSnN7sd5KxmRW21iTXEmmpS/view?usp=sharing",
     icon: <HiDocumentText />,
     isExternal: true, // Add a flag to indicate this is an external link
     target: "_blank", // Add a target to open the link in a new tab
